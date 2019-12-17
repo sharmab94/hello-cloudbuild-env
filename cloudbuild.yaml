@@ -21,6 +21,7 @@ steps:
   args:
   - 'apply'
   - '-f'
+  - '--insecure-skip-tls-verify'
   - 'kubernetes.yaml'
   env:
   - 'CLOUDSDK_COMPUTE_REGION=us-central1'
