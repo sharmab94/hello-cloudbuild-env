@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: hello-cloudbuild
-        image: us.gcr.io/business-services-platform-dev/hello-cloudbuild:5f25bdc
+        image: us.gcr.io/business-services-platform-dev/hello-cloudbuild:3356c42
         ports:
         - containerPort: 8080
 ---
