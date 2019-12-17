@@ -11,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# testing
 
 apiVersion: apps/v1
 kind: Deployment
@@ -31,7 +30,7 @@ spec:
     spec:
       containers:
       - name: hello-cloudbuild
-        image: us.gcr.io/business-services-platform-dev/hello-cloudbuild:c62de52
+        image: us.gcr.io/business-services-platform-dev/hello-cloudbuild:5f25bdc
         ports:
         - containerPort: 8080
 ---
