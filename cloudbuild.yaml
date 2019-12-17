@@ -47,6 +47,3 @@ steps:
     # Push the changes back to Cloud Source Repository
     git push origin master
 # [END cloudbuild-delivery]
-
-options:
-  workerPool: 'odsp-management/cloud-build-workers'
