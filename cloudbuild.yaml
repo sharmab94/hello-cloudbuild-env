@@ -20,8 +20,8 @@ steps:
   id: Deploy
   args:
   - 'apply'
-  - '-f'
   - '--insecure-skip-tls-verify'
+  - '-f'
   - 'kubernetes.yaml'
   env:
   - 'CLOUDSDK_COMPUTE_REGION=us-central1'
