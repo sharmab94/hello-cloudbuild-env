@@ -24,7 +24,7 @@ steps:
   - 'kubernetes.yaml'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=business-services-cluster'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=business-services-platform'
 
 # This step copies the applied manifest to the master branch
 # The COMMIT_SHA variable is automatically
