@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+<<<<<<< HEAD
 # [START cloudbuild-delivery]
 steps:
 # This step deploys the new version of our container image
@@ -47,3 +48,39 @@ steps:
     # Push the changes back to Cloud Source Repository
     git push origin master
 # [END cloudbuild-delivery]
+=======
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-cloudbuild
+  labels:
+    app: hello-cloudbuild
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-cloudbuild
+  template:
+    metadata:
+      labels:
+        app: hello-cloudbuild
+    spec:
+      containers:
+      - name: hello-cloudbuild
+        image: us.gcr.io/business-services-platform-dev/hello-cloudbuild:ae11027
+        ports:
+        - containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-cloudbuild
+spec:
+  selector:
+    app: hello-cloudbuild
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
+>>>>>>> 9275d9a415944341f01b024d3502357840a8f1ef
